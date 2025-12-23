@@ -1,12 +1,16 @@
 {
   "manifest_version": 3,
   "name": "WHY - Focus Gate",
-  "version": "1.0",
-  "description": "Blocks websites until you provide a reason for visiting.",
+  "version": "2.0",
+  "description": "Blocks websites until you provide a reason and set a time limit.",
   "icons": {
     "16": "assets/icon.png",
     "48": "assets/icon.png",
     "128": "assets/icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "assets/icon.png"
   },
   "content_scripts": [
     {
@@ -17,7 +21,8 @@
         "*://*.reddit.com/*",
         "*://*.twitter.com/*",
         "*://*.x.com/*",
-        "*://*.tiktok.com/*"
+        "*://*.tiktok.com/*",
+        "*://*.linkedin.com/*"
       ],
       "css": ["styles/overlay.css"],
       "js": ["scripts/content.js"],

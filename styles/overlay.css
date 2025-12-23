@@ -48,6 +48,120 @@
   background-color: #444;
 }
 
+/* Full screen overlay */
+#why-extension-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(18, 18, 18, 0.98); /* Deep dark background */
+  backdrop-filter: blur(10px);
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #ffffff;
+}
+
+/* Card Container */
+.why-container {
+  background: #2a2a2a;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 400px;
+  border: 1px solid #333;
+}
+
+#why-extension-overlay img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+#why-extension-overlay h1 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Input Fields */
+#why-extension-overlay textarea {
+  width: 100%;
+  height: 80px;
+  padding: 12px;
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  resize: none;
+  outline: none;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+#why-extension-overlay textarea:focus {
+  border-color: #3b82f6;
+}
+
+/* Time Selector */
+.time-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #444;
+}
+
+.time-selector label {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+#why-extension-overlay select {
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  text-align: right;
+}
+
+/* Button */
+#why-extension-overlay button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #3b82f6; /* Blue accent */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#why-extension-overlay button:hover {
+  background-color: #2563eb;
+}
+
+/* Prevent scrolling when locked */
+body.why-locked {
+  overflow: hidden !important;
+}
+
 /* Hide the main website scrollbar while locked */
 body.why-locked {
   overflow: hidden !important;
