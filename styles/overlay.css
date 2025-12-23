@@ -1,0 +1,54 @@
+/* The container that covers the whole screen */
+#why-extension-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 2147483647; /* Maximum possible Z-index to sit on top of everything */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+#why-extension-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+#why-extension-overlay textarea {
+  width: 400px;
+  height: 100px;
+  padding: 15px;
+  font-size: 1.1rem;
+  border: 2px solid #333;
+  border-radius: 8px;
+  resize: none;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+#why-extension-overlay button {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#why-extension-overlay button:hover {
+  background-color: #444;
+}
+
+/* Hide the main website scrollbar while locked */
+body.why-locked {
+  overflow: hidden !important;
+}
